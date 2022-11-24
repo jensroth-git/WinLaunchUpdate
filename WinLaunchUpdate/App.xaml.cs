@@ -14,7 +14,7 @@ namespace WinLaunchUpdate
 
         protected override void OnStartup(StartupEventArgs e)
         {
-            if (e.Args.First() == "-silent")
+            if (e.Args.Count() > 0 && e.Args.First() == "-silent")
             {
                 Silent = true;
             }
